@@ -13,10 +13,10 @@ import time
 
 ############################################# FUNCTIONS ################################################
 
-def assure_path_exists(path):
+async def assure_path_exists(path):
     dir = os.path.dirname(path)
     if not os.path.exists(dir):
-        os.makedirs(dir)
+        await os.makedirs(dir)
 
 ##################################################################################
 
